@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Chart App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Dynamic Chart Viewer</h2>
+
+        <div class="controls">
+            <label for="chartType">Chart Type:</label>
+            <select id="chartType">
+                <option value="bar">Bar</option>
+                <option value="line">Line</option>
+                <option value="pie">Pie</option>
+            </select>
+            <button onclick="loadChart()">Load Chart</button>
+        </div>
+
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+</body>
+</html>
